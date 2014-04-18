@@ -1,0 +1,6 @@
+[submodule "libxml2"]
+	path = libxml2
+	url = git://git.gnome.org/libxml2
+[submodule "libcsv"]
+	path = libcsv
+	url = https://github.com/robertpostill/libcsv
