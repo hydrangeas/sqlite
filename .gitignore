@@ -2,4 +2,7 @@ a.out
 htest
 .DS_Store
 *.db
-
+Makefile
+CMakefiles
+*.cmake
+CMakeCache.txt
