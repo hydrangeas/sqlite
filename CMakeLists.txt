@@ -1,7 +1,7 @@
 # CMakeのバージョン
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 # リリースビルド用オプション
-SET(CMAKE_C_FLAGS_RELEASE "-Wall -O3 -lsqlite3")
+SET(CMAKE_C_FLAGS_RELEASE "-Wall -O3 -lxml2")
 # デバッグビルド用オプション
 SET(CMAKE_C_FLAGS_DEBUG "-g")
 # ビルドのタイプはリリース
@@ -31,7 +31,7 @@ include_directories(./sqlite/)
 
 # 
 find_package(libxml2 REQUIRED)
-find_package(libcsv REQUIRED)
+#find_package(libcsv REQUIRED)
 
 # 実行ファイルの作成
 add_executable (htest main.c sqlite/sqlite3.c libcsv/libcsv.c)
