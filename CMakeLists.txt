@@ -24,5 +24,9 @@ include_directories(./sqlite/)
 # リンクヘッダ
 #link_directories(./sqlite/)
 
+# 
+find_package(libxml2 REQUIRED)
+find_package(libcsv REQUIRED)
+
 # 実行ファイルの作成
 add_executable (htest main.c sqlite/sqlite3.c)
