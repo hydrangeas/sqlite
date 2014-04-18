@@ -1,7 +1,7 @@
 # CMakeのバージョン
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 # リリースビルド用オプション
-SET(CMAKE_C_FLAGS_RELEASE "-Wall -O4 -lsqlite3")
+SET(CMAKE_C_FLAGS_RELEASE "-Wall -O3 -lsqlite3")
 # デバッグビルド用オプション
 SET(CMAKE_C_FLAGS_DEBUG "-g")
 # ビルドのタイプはリリース
@@ -12,28 +12,17 @@ PROJECT(HIT_TEST C)
 # バージョン番号
 SET(serial "1.0.0")
 
+# ヘッダファイルの構成
+#configure_file (
+#  "${PROJECT_SOURCE_DIR}/TutorialConfig.h.in"
+#  "${PROJECT_BINARY_DIR}/TutorialConfig.h"
+#  )
+
+# インクルードヘッダ
+include_directories(./sqlite/)
+
+# リンクヘッダ
+#link_directories(./sqlite/)
+
 # 実行ファイルの作成
-add_executable (htest main.c)
-
-IF (UNIX)
-  ADD_CUSTOM_TARGET (distclean @echo cleaning for source distribution)
-  SET(DISTCLEANED
-    cmake.depends
-    cmake.check_depends
-    CMakeCache.txt
-    cmake.check_cache
-    *.cmake
-    Makefile
-    core core.*
-    gmon.out
-    *~
-    )
-
-  ADD_CUSTOM_COMMAND(
-    DEPENDS clean
-    COMMENT "distribution clean"
-    COMMAND rm
-    ARGS    -Rf CMakeTmp ${DISTCLEANED}
-    TARGET  distclean
-    )
-ENDIF(UNIX)
+add_executable (htest main.c sqlite/sqlite3.c)
