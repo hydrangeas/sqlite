@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TestProperties SYSTEM "signal.dtd">
+<TestProperties>
+  <TestName>試射試験</TestName>
+  <Signals>
+    <Signal>
+      <FormalName>試験A</FormalName>
+      <SqlName>TestA</SqlName>
+    </Signal>
+    <Signal>
+      <FormalName>試験B</FormalName>
+      <SqlName>TestB</SqlName>
+    </Signal>
+  </Signals>
+</TestProperties>

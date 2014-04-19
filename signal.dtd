@@ -1,0 +1,6 @@
+<!ELEMENT FormalName (#PCDATA)>
+<!ELEMENT SqlName (#PCDATA)>
+<!ELEMENT Signal (FormalName,SqlName)>
+<!ELEMENT Signals (Signal)*>
+<!ELEMENT TestName (#PCDATA)>
+<!ELEMENT TestProperties (TestName,Signals)>
