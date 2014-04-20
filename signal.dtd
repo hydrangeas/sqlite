@@ -1,6 +1,7 @@
-<!ELEMENT FormalName (#PCDATA)>
-<!ELEMENT SqlName (#PCDATA)>
-<!ELEMENT Signal (FormalName,SqlName)>
-<!ELEMENT Signals (Signal)*>
-<!ELEMENT TestName (#PCDATA)>
 <!ELEMENT TestProperties (TestName,Signals)>
+<!ELEMENT TestName (#PCDATA)>
+<!ELEMENT Signals (Signal+)>
+<!ELEMENT Signal (FormalName)>
+<!ELEMENT FormalName (#PCDATA)>
+  <!ATTLIST Signal position CDATA #REQUIRED>
+  <!ATTLIST Signal sqlName ID #REQUIRED>

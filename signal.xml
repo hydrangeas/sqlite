@@ -3,13 +3,11 @@
 <TestProperties>
   <TestName>試射試験</TestName>
   <Signals>
-    <Signal>
+    <Signal position="1" sqlName="TestA">
       <FormalName>試験A</FormalName>
-      <SqlName>TestA</SqlName>
     </Signal>
-    <Signal>
+    <Signal position="2" sqlName="TestB">
       <FormalName>試験B</FormalName>
-      <SqlName>TestB</SqlName>
     </Signal>
   </Signals>
 </TestProperties>
